@@ -1,0 +1,4 @@
+#Sat May 16 19:00:18 WIB 2020
+base.0=/home/aditya/Documents/github/POS-springboot-react-reactnative/MobileClient/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

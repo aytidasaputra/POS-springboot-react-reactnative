@@ -1,0 +1,26 @@
+application.data-dir: ${DATA_DIR:./images}
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/bootcamp?serverTimezone=UTC
+        username: root
+        password: 1234
+        initialization-mode: always
+        continue-on-error: true
+    jpa:
+     hibernate:
+        ddl-auto: create
+     generate-ddl: true
+     show-sql: true
+     properties:
+        hibernate:
+         dialect: org.hibernate.dialect.MySQL5Dialect
+    messages:
+     basename: i18n/messages
+    servlet:
+     multipart:
+        enabled: true
+        max-file-size: 10MB
+        max-request-size: 10MB
+
+#  server.error.whitelabel.enabled: false

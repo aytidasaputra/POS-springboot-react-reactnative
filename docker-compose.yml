@@ -1,0 +1,43 @@
+version: "3"
+services:
+  client:
+    container_name: web-client
+    build:
+      context: ./web-client
+      args:
+        - BACKEND_URL=http://localhost:8080/api/
+    image: com.enigma/web-client:latest
+    depends_on:
+      - service
+    ports:
+      - 3000:80
+  proxy:
+    container_name: reverse-proxy
+    build: ./reverse-proxy
+    image: com.enigma/reverse-proxy:latest
+    depends_on:
+      - client
+      - service
+    ports:
+      - 8080:80
+  service:
+    container_name: rest-service
+    build: ./rest-service
+    image: com.enigma/rest-service:latest
+    environment:
+      - DB_HOST=db
+    restart: on-failure
+    depends_on:
+      - db
+    ports:
+      - 8090:8080
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: "bootcamp"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "user123"
+      MYSQL_ROOT_PASSWORD: "root123"
+    ports:
+      - "3306:3306"

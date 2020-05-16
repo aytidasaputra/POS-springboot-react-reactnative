@@ -1,0 +1,20 @@
+application.data-dir: ./images
+spring:
+    datasource:
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:mem:bootcamp
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        generate-ddl: true
+        show-sql: true
+        properties:
+            hibernate: 
+                dialect: org.hibernate.dialect.H2Dialect
+    messages:   
+        basename: i18n/messages
+    servlet:
+        multipart:
+            enabled: true
+            max-file-size: 2MB
+            max-request-size: 2MB

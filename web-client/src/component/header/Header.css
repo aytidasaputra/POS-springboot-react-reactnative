@@ -1,0 +1,22 @@
+.badge-header {
+    height: 30px;
+}
+
+Button.Group{
+    width: 100%;
+}
+.header-header {
+    display: inline-block;
+    width: 100%;
+    height: 255px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/img/header.png");
+}
+
+.header-top{
+    -webkit-margin-collapse: discard;
+}
+.footer{
+    -webkit-margin-collapse: discard;
+}

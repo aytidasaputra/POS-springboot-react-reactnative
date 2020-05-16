@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should  1`] = `
+<BrowserRouter>
+  <Switch>
+    <Route
+      exact={true}
+      key="0"
+      path="/"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="1"
+      path="/items"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="2"
+      path="/units/add"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="3"
+      path="/units/:id"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="4"
+      path="/units"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="5"
+      path="/transactions"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="6"
+      path="/stocks"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="7"
+      path="*"
+      render={[Function]}
+    />
+  </Switch>
+</BrowserRouter>
+`;
